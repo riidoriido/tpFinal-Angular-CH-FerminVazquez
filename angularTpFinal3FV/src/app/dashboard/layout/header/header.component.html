@@ -1,0 +1,26 @@
+<mat-toolbar
+  class="flex align-items-center justify-content-between"
+  color="primary"
+>
+  <button type="button" mat-icon-button (click)="toggleSidebar.emit()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <br /><br />
+  <div>
+    <span
+      style="cursor: pointer"
+      *ngIf="user; else templateName"
+      routerLink="my-profile"
+    >
+      Logged as: {{ user.fullName }}
+    </span>
+    <button (click)="authService.logOut()" color="accent" mat-mini-fab>
+      <mat-icon>logout</mat-icon>
+    </button>
+    <ng-template #templateName>
+      <button routerLink="/auth/login" mat-mini-fab color="primary">
+        <mat-icon>login</mat-icon>
+      </button>
+    </ng-template>
+  </div>
+</mat-toolbar>

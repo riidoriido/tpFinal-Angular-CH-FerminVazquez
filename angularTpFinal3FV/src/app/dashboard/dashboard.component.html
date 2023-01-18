@@ -1,0 +1,9 @@
+<mat-drawer-container class="dashboard-container" autosize>
+  <mat-drawer [opened]="false" #drawer class="sidenav" mode="over">
+    <app-nav></app-nav>
+  </mat-drawer>
+  <app-header (toggleSidebar)="drawer.toggle()"></app-header>
+  <app-page-wrapper>
+    <router-outlet></router-outlet>
+  </app-page-wrapper>
+</mat-drawer-container>
