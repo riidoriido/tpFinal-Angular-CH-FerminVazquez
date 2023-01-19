@@ -1,0 +1,11 @@
+<div class="cardctn">
+  <app-curso-card
+    *ngFor="let curso of cursos$ | async"
+    [curso]="curso"
+    (eliminar)="clickEliminar($event)"
+  >
+  </app-curso-card>
+</div>
+<button mat-flat-button color="primary" (click)="agregarCurso()">
+  Agregar <mat-icon>add</mat-icon>
+</button>

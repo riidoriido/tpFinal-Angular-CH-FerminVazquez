@@ -1,0 +1,18 @@
+<ng-container *ngIf="curso; else missingTemplate">
+  <mat-card>
+    <mat-card-title>{{ curso.titulo }}</mat-card-title>
+    <mat-card-content>
+      <p>{{ curso.descripcion }}</p>
+      <br />
+      <small>Duración: {{ curso.duracion }}</small>
+    </mat-card-content>
+    <mat-card-footer>
+      <p *ngIf="curso.tieneFinal">
+        <i>Este curso tiene un proyecto final.</i>
+      </p>
+    </mat-card-footer>
+  </mat-card>
+</ng-container>
+<ng-template #missingTemplate>
+  <h1>No existe el curso solicitado</h1>
+</ng-template>

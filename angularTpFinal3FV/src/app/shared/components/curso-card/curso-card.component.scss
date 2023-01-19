@@ -1,0 +1,33 @@
+.curso-card {
+  max-width: 15vw;
+  min-height: 300px;
+  overflow-y: auto;
+  position: relative;
+}
+
+mat-card-title {
+  color: deeppink;
+  padding: 3% 0%;
+}
+
+mat-card-content {
+  margin: 10px 15px;
+  text-align: justify;
+}
+
+mat-card-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+a.btndetail {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+}
+
+button.btndelete {
+  position: absolute;
+  bottom: 8px;
+  right: 0px;
+}

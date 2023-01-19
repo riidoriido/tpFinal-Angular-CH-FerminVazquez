@@ -1,0 +1,34 @@
+<mat-card class="curso-card">
+  <div>
+    <mat-card-header>
+      <mat-card-title>{{ curso.titulo }}</mat-card-title>
+      <mat-card-subtitle>{{ curso.duracion }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ curso.descripcion }}</p>
+    </mat-card-content>
+    <mat-card-footer *ngIf="curso.tieneFinal">
+      <p>
+        <small>Este curso tiene trabajo final.</small>
+      </p>
+    </mat-card-footer>
+    <mat-card-actions>
+      <a
+        class="btndetail"
+        mat-raised-button
+        color="primary"
+        routerLink=":curso.id"
+      >
+        <mat-icon>info</mat-icon>
+      </a>
+      <button
+        class="btndelete"
+        mat-raised-button
+        color="accent"
+        (click)="eliminarCurso()"
+      >
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-card-actions>
+  </div>
+</mat-card>
