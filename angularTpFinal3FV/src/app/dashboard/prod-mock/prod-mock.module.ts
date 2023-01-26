@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ProdMockRoutingModule } from './prod-mock-routing.module';
 import { ProdMockPageComponent } from './pages/prod-mock-page/prod-mock-page.component';
-import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
+import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({

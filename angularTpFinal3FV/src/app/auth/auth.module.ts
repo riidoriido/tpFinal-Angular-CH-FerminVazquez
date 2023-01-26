@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '../shared/shared.module';
 import { AuthService } from './auth.service';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { MatFormField } from '@angular/material/form-field';
 @NgModule({
   declarations: [LoginPageComponent],
   imports: [
@@ -17,6 +17,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     SharedModule,
     AuthRoutingModule,
   ],
-  providers: [AuthService],
+  providers: [AuthService, MatFormField],
 })
 export class AuthModule {}
