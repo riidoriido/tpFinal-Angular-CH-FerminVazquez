@@ -6,7 +6,7 @@ import { EstudiantespageComponent } from './pages/estudiantespage/estudiantespag
 import { EstudiantesdialogComponent } from './estudiantesdialog/estudiantesdialog.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { MatTableModule } from '@angular/material/table';
+import { MatLegacyTableModule as MatTableModule } from '@angular/material/legacy-table';
 
 @NgModule({
   declarations: [EstudiantespageComponent, EstudiantesdialogComponent],
